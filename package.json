@@ -5,9 +5,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "deploy": "pnpm run build",
-    "dev": "vite --port 3000",
-    "build": "tsc -b && vite build",
+    "dev": "vite start",
+    "build": "vite build",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d dist",
     "test": "vitest",
     "preview": "vite preview"
   },
